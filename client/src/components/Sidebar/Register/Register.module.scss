@@ -1,0 +1,55 @@
+.Register {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Register__modal {
+    width: 60%;
+    background: #fff;
+
+    padding: 50px;
+    border-radius: 35px;
+
+    & form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    & label {
+        color: #2A8BF2;
+        margin-bottom: 5px;
+        margin-left: 15px;
+    }
+
+    & input, button {
+        margin-bottom: 20px;
+        outline: none;
+        border: 1px solid #2A8BF2;
+        border-radius: 20px;
+        padding: 10px 15px;
+        font-size: 18px;
+        color: #707C97;
+    }
+
+    & button {
+        background: none;
+        cursor: pointer;
+        color: #2A8BF2;
+
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background: #2A8BF2;
+            color: #fff;
+        }
+    }
+}

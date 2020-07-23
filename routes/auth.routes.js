@@ -20,19 +20,19 @@ authRouter.post(
                 errors: errors.array(),
                 message: 'Некорректные данные при регистрации! Повторите попытку.'
             });
-            const { email, password, fullname, gender, city, country } = req.body;
-
+            const { email, password, fullname, city, country } = req.body;
+            
             const person = await User.findOne({ email });
             if (person) return res.status(400).json({ message: 'Такой пользователь уже существует..!' });
-
+            
             const hashedPass = await bcrypt.hash(password, 12);
-            const user = new User({ email, password: hashedPass, fullname, gender, city, country });
-
+            const user = new User({ email, password: hashedPass, fullname, city, country });
+            
             await user.save();
 
             res.status(201).json({ message: 'Пользователь создан!' })
         } catch (err) {
-            res.status(500).json({ message: 'Что-то пошло не так..((' });
+            res.status(500).json({ message: 'Что-то пошло не так..(((' });
         }
     }
 );

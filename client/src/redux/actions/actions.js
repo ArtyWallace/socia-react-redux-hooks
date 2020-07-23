@@ -1,4 +1,4 @@
-import { CREATE_POST, FOLLOW, UNFOLLOW, SET_USERS } from "./types";
+import { CREATE_POST, FOLLOW, UNFOLLOW, SET_USERS, REGISTER } from "./types";
 import Axios from "axios";
 
 // Posts
@@ -11,7 +11,24 @@ export const unfollow = userId => ({ type: UNFOLLOW, payload: userId });
 
 export const setUsers = () => {
     return async dispatch => {
-        const data = await Axios.get('https://social-network.samuraijs.com/api/1.0/users');
-        dispatch({ type: SET_USERS, payload: data.data.items });
+        try {
+            const data = await Axios.get('http://localhost:5000/api/users');
+            dispatch({ type: SET_USERS, payload: data.data.users });
+        } catch (err) {}
+    }
+}
+
+export const createUser = user => {
+    return async dispatch => {
+        try {
+            const data = await Axios.post('http://localhost:5000/api/auth/register', user,
+                {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                console.log(data);
+            dispatch({ type: REGISTER, payload: data });
+        } catch (err) {}
     }
 }

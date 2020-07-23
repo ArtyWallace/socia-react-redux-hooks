@@ -11,8 +11,8 @@ export const User = ({ user }) => {
             
             <img src={user.photo} alt={user.fullName} />
             <div className={classes.User__info} >
-                <div>{user.name}</div>
-                {/* <div>{user.location.city}, {user.location.country}</div> */}
+                <div>{user.fullname}</div>
+                <div>{user.city}</div>
             </div>
             {
                 user.followed 

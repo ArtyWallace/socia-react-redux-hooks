@@ -1,4 +1,4 @@
-import { FOLLOW, UNFOLLOW, SET_USERS } from "../actions/types";
+import { FOLLOW, UNFOLLOW, SET_USERS, REGISTER } from "../actions/types";
 
 const initialState = {
     users: 
@@ -31,7 +31,9 @@ export function usersReducer(state = initialState, action) {
                     }
                     return user;
                 })
-            }
+            };
+        case REGISTER:
+            return { ...state, users: [...state.users, action.payload] };
         case SET_USERS:
             return { ...state, users: [...action.payload] };
         default:

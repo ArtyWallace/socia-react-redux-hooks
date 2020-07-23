@@ -10,12 +10,17 @@ export const Users = () => {
 
     useEffect(() => {
         dispatch(setUsers());
-    }, [dispatch]);
+    }, [dispatch, users.length]);
+
+    useEffect(() => {
+
+        console.log(users);
+    })
 
     return (
         <div className={classes.Users}>
             {
-                users.map(user => <User key={user.id} user={user} />)
+                users.map(user => <User key={user._id} user={user} />)
             }
         </div>
     )

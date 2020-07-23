@@ -1,8 +1,14 @@
 .Menu {
     margin-top: 75px;
+    // height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
-.Menu__item {
+.Menu__item,
+.Menu__button {
     display: block;
     padding: 10px 0;
     font-size: 16px;
@@ -14,20 +20,6 @@
     position: relative;
 
     transition: color .3s ease-in-out;
-
-    &:last-child {
-        position: fixed;
-        bottom: 50px;
-        margin-bottom: 0;
-
-        &:hover {
-            color: #FF3366;
-
-            &:before {
-                background: #FF3366;
-            }
-        }
-    }
 
     &:before {
         content: '';
@@ -54,6 +46,27 @@
     & i {
         margin-left: 35px;
         margin-right: 18px;
+    }
+}
+
+.Menu__button {
+
+    & i {
+        margin-left: 35px;
+        margin-right: 18px;
+    }
+
+    &:before {
+        background: #FF3366;
+        box-shadow: 4px 0px 25px #fd3365ab, 0px 0px 10px #ff336671, 1px 0px 10px #ff33664f;
+    }
+        
+    &:hover {
+        color: #FF3366;
+    
+        &:before {
+            width: 3px;
+        }
     }
 }
 

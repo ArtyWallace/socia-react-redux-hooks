@@ -1,0 +1,41 @@
+.Auth {
+    padding: 0 40px;
+
+    & form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    & input, button {
+        margin-bottom: 10px;
+        outline: none;
+        border: 1px solid #2A8BF2;
+        border-radius: 20px;
+        padding: 10px 15px;
+        font-size: 18px;
+        color: #707C97;
+
+        transition: all .3s ease-in-out;
+    }
+
+    & button {
+        background: none;
+        cursor: pointer;
+        color: #2A8BF2;
+
+        &:hover {
+            background: #2A8BF2;
+            color: #fff;
+        }
+
+        &:last-child {
+            color: #FF3366;
+            border-color: #FF3366;
+
+            &:hover {
+                color: #fff;
+                background: #FF3366;
+            }
+        }
+    }
+}
