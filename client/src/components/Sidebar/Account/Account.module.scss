@@ -1,0 +1,15 @@
+.Account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Account__photo {
+    border: 1px solid #eee;
+    border-radius: 50%;
+}
+
+.Account__name {
+    margin-top: 10px;
+    font-size: 20px;
+}

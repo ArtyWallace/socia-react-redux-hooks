@@ -1,0 +1,50 @@
+.Postform {
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+    margin: 0 auto;
+
+    & input, textarea {
+        border: none;
+        outline: none;
+        background: none;
+        border-bottom: 1px solid #2A8BF2;
+        border-radius: 5px;
+
+        padding: 15px;
+        margin-bottom: 20px;
+
+        font-size: 16px;
+        color: #707C97;
+        font-family: inherit;
+    }
+
+    & textarea {
+        resize: none;
+        height: 150px;
+        font-size: 16px;
+    }
+
+    & button {
+        display: inline-block;
+        max-width: 100px;
+        padding: 5px 15px;
+
+        color: #707C97;
+
+        background: none;
+        outline: none;
+        border: 1px solid #2A8BF2;
+        border-radius: 15px;
+
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: #fff;
+            background: #2A8BF2;
+        }
+    }
+}
+

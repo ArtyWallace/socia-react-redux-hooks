@@ -1,0 +1,51 @@
+.User {
+    max-width: 500px;
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+
+    & button {
+        border: none;
+        outline: none;
+
+        cursor: pointer;
+
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 5px 15px;
+        margin: 0 0 0 auto;
+        font-size: 18px;
+        color: #fff;
+    }
+}
+
+.User__info {
+    margin-left: 20px;
+    color: #707C97;
+
+    & div:first-child {
+        font-size: 20px;
+        color: #2A8BF2;
+    }
+}
+
+.followed {
+    background: rgba(21, 167, 21, 0.7);
+    transition: background .3s ease-in-out;
+
+    &:hover {
+        background: rgba(21, 167, 21, 1);
+    }
+}
+
+.unfollowed {
+    background: #2989f0b2;
+    transition: background .3s ease-in-out;
+
+    &:hover {
+        background: #2989f0;
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "port": 5000,
+    "jwtSecret": "arty wallace network",
+    "mongoUri": "mongodb+srv://artem:artem12345@cluster0.5d5qw.mongodb.net/network?retryWrites=true&w=majority"
+}

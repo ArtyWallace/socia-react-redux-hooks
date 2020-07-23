@@ -1,0 +1,66 @@
+.Menu {
+    margin-top: 75px;
+}
+
+.Menu__item {
+    display: block;
+    padding: 10px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    cursor: pointer;
+    color: #707C97;
+
+    position: relative;
+
+    transition: color .3s ease-in-out;
+
+    &:last-child {
+        position: fixed;
+        bottom: 50px;
+        margin-bottom: 0;
+
+        &:hover {
+            color: #FF3366;
+
+            &:before {
+                background: #FF3366;
+            }
+        }
+    }
+
+    &:before {
+        content: '';
+        width: 0;
+        height: 100%;
+        background: #2A8BF2;
+        border-radius: 3px;
+        box-shadow: 4px 0px 25px rgba(42, 139, 242, 0.75), 0px 0px 10px rgba(42, 139, 242, 0.55), 1px 0px 10px rgba(42, 139, 242, 0.45);
+        transition: width .2s linear;
+
+        position: absolute;
+        left: 3px;
+        top: 0;
+    }
+
+    &:hover {
+        color: #2A8BF2;
+
+        &:before {
+            width: 3px;
+        }
+    }
+
+    & i {
+        margin-left: 35px;
+        margin-right: 18px;
+    }
+}
+
+.active {
+    color: #2A8BF2;
+
+    &:before {
+        width: 3px;
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "social-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "npm run start --prefix client",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtyWallace/social-react-redux-hooks.git"
+  },
+  "author": "Artem Prudnikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtyWallace/social-react-redux-hooks/issues"
+  },
+  "homepage": "https://github.com/ArtyWallace/social-react-redux-hooks#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.2.0",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.25"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
